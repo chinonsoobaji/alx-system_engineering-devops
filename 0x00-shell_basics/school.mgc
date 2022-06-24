@@ -1,3 +1,3 @@
-school.mgc 
-line1, 0 string SCHOOL school data
-line2, !:mime School
+#!/bin/bas
+0 string SCHOOL school data
+!:mime School
