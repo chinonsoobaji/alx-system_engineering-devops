@@ -1,18 +1,11 @@
 #!/usr/bin/env bash
-# Displays the time for 12 horus and 59 minutes.
-#   Displays hours from 0 to 12
-#   Displays minutes from 1 to 59
-
-hour=0
-
-while [ $hour -le 12 ]
-do
-  echo "Hour: $hour"
-  minute=1
-  while [ $minute -le 59 ]
-  do
-    echo "$minute"
-    (( minute++ ))
-  done
-  (( hour++ ))
-done
+# supposed to be nested loop
+i="0"
+while [ "$i" -le $((60 * 12 + 59)) ]; do
+	if [ $((i % 60)) -eq 0 ]; then
+		echo "Hour: $((i / 60))"
+	else
+		echo "$((i % 60))"
+	fi;
+	i=$((i + 1))
+done;
